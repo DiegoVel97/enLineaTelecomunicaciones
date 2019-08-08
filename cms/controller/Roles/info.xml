@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<modulos>
+    <nombre>Roles</nombre>
+    <icono>mdi-social-group</icono>
+    <sitioMenu>configuracion</sitioMenu>
+    <descripcion>Modulo asignar Roles a un usuario</descripcion>
+   
+    <controladores>
+        <controlador>
+            <nombre>rolesController</nombre>
+            <icono>mdi-social-group</icono>
+            <display>Roles</display>
+            <descripcion>Controlador de Roles</descripcion>
+            
+            <funciones>
+                <funcion>
+                    <nombre>crear</nombre>
+                    <display>Crear Rol</display>
+                    <descripcion>Crear Rol</descripcion>
+                </funcion>
+                
+                <funcion>
+                    <nombre>editar</nombre>
+                    <display>Editar Rol</display>
+                    <descripcion>Editar Rol</descripcion>
+                </funcion>
+
+                <funcion>
+                    <nombre>listar</nombre>
+                    <display>Listar roles</display>
+                    <descripcion>Lista los roles</descripcion>
+                </funcion>
+
+                <funcion>
+                    <nombre>eliminar</nombre>
+                    <display>ELiminar Rol</display>
+                    <descripcion>ELiminar Rol</descripcion>
+                </funcion>
+            </funciones>
+            
+        </controlador>
+    </controladores>
+</modulos>

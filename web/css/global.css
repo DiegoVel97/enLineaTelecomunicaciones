@@ -1,0 +1,117 @@
+
+
+.submenu-lista{
+    display: none;
+/*    margin-left: 191px;
+    margin-top: -42px;
+    overflow: auto;
+    position: fixed;
+    width: 250px;
+    z-index: 999999;
+    background-color: white;*/
+}
+
+.submenu{
+    cursor: pointer;
+}
+
+.submenu-lista ul li a{
+    font-size: 0.8em !important;
+}
+
+.submenu-lista ul li a{
+    color: #000 !important;
+}
+
+/*
+* Ajustes de estilos para la funcionalidad de chosen
+*/
+.select2-container--default .select2-selection--multiple{
+    border-bottom: 1px solid #aaa !important;
+    border-radius: 0px !important;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple{
+    border-bottom: 1px solid #aaa !important;
+}
+
+.select2-container--default .select2-selection--single{
+    border-bottom: 1px solid #aaa !important;    
+    border-radius: 0px !important;
+}
+
+.select2{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height: 45px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: 45px !important;
+}
+
+/* Estilos para resaltar los campos que el usuario debe corregir */
+code{
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    color: #c7254e;
+    font-size: 90%;
+    padding: 2px 4px;
+}
+
+/*Efecto zoom para los módulos cuando se edita un permiso*/
+.modulo_permisos{
+    background: teal;
+    text-align: center;
+    color:white;
+    font-size: 16px;
+    border-top: 3px;
+    cursor: pointer;
+    border-radius: 2px;
+    border: 1px solid black;
+    /*Efecto zoom*/
+    transition: 0.5s ease;
+    -moz-transition: 0.1s ease; /* Firefox */
+    -webkit-transition: ease; /* Chrome - Safari */
+    -o-transition: 0.1s ease; /* Opera */
+}
+.modulo_permisos:hover{
+    background:#1E90FF !important;
+    transform : scale(1.05);
+    -moz-transform : scale(1.05); /* Firefox */
+    -webkit-transform : scale(1.07); /* Chrome - Safari */
+    -o-transform : scale(1.05); /* Opera */
+    -ms-transform : scale(1.05); /* IE9 */
+}
+
+/*Contenedor de los errores que se muestran por medio de ajax*/
+#cont_errors_ajax{
+    display:none;
+}
+
+/*Mensajes de error en los campos de formularios*/
+.error{
+    color: #F44336;
+}
+
+/*Colores institucionales*/
+
+.verde_claro{
+    background: #5eb319;
+}
+
+.verde_oscuro{
+    background: #238276;
+}
+
+.gris{
+    background: #707070;
+}
+
+.naranja{
+    background: #fc7323;
+}
+

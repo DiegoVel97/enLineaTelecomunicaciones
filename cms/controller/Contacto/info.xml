@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<modulos>
+    <nombre>Contacto</nombre>
+    <icono>mdi-action-assignment</icono>
+    <sitioMenu>principal</sitioMenu>
+    <descripcion>Modulo contacto</descripcion>
+   
+    <controladores>
+        <controlador>
+            <nombre>contactoController</nombre>
+            <icono>mdi-action-assignment</icono>
+            <display>Contacto</display>
+            <descripcion>Controlador de Contacto</descripcion>
+            
+            <funciones>
+                <funcion>
+                    <nombre>listar</nombre>
+                    <display>Listar contacto</display>
+                    <descripcion>Listar contacto</descripcion>
+                </funcion>
+                <funcion>
+                    <nombre>mapa</nombre>
+                    <display>Edicion mapa</display>
+                    <descripcion>Listar contacto</descripcion>
+                </funcion>
+            </funciones>
+        </controlador>
+    </controladores>
+</modulos>

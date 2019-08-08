@@ -1,0 +1,4 @@
+[01-Aug-2019 21:01:49 UTC] PHP Fatal error:  Call to undefined method nosotrosController::faqs.html() in /home/sharecom/public_html/enlinea_telecomunicacion/web/index.php on line 66
+[01-Aug-2019 21:02:03 UTC] PHP Fatal error:  Call to undefined method nosotrosController::gallery.html() in /home/sharecom/public_html/enlinea_telecomunicacion/web/index.php on line 66
+[01-Aug-2019 21:30:39 UTC] PHP Fatal error:  Call to undefined method nosotrosController::faqs.html() in /home/sharecom/public_html/enlinea_telecomunicacion/web/index.php on line 66
+[07-Aug-2019 01:36:29 UTC] PHP Fatal error:  Call to undefined method nosotrosController::index.html() in /home/sharecom/public_html/enlinea_telecomunicacion/web/index.php on line 66

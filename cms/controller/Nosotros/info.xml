@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<modulos>
+    <nombre>Nosotros</nombre>
+    <icono>mdi-social-group</icono>
+    <sitioMenu>principal</sitioMenu>
+    <descripcion>Modulo asignar Roles a un usuario</descripcion>
+   
+    <controladores>
+        <controlador>
+            <nombre>nosotrosController</nombre>
+            <icono>mdi-social-group</icono>
+            <display>Nosotros</display>
+            <descripcion>Controlador de Roles</descripcion>
+            
+            <funciones>
+                <funcion>
+                    <nombre>mision</nombre>
+                    <display>Edicion mision</display>
+                    <descripcion>Editar Mision</descripcion>
+                </funcion>
+
+				<funcion>
+                    <nombre>vision</nombre>
+                    <display>Editar vision</display>
+                    <descripcion>Editar Mision</descripcion>
+                </funcion>
+
+				<funcion>
+                    <nombre>nosotros</nombre>
+                    <display>Editar nosotros</display>
+                    <descripcion>Editar Mision</descripcion>
+                </funcion>
+                <funcion>
+                    <nombre>servicios</nombre>
+                    <display>Agregar servicio</display>
+                    <descripcion>Agregar servicio</descripcion>
+                </funcion>
+                <funcion>
+                    <nombre>listar</nombre>
+                    <display>Listar servicios</display>
+                    <descripcion>Listar servicios</descripcion>
+                </funcion>
+            </funciones>
+            
+        </controlador>
+    </controladores>
+</modulos>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<modulos>
+    <nombre>Noticias</nombre>
+    <icono>mdi-editor-insert-drive-file</icono>
+    <sitioMenu>principal</sitioMenu>
+    <descripcion>Modulo noticias</descripcion>
+   
+    <controladores>
+        <controlador>
+            <nombre>noticiasController</nombre>
+            <icono>mdi-editor-insert-drive-file</icono>
+            <display>Noticias</display>
+            <descripcion>Controlador de Noticias</descripcion>
+            
+            <funciones>
+                <funcion>
+                    <nombre>crear</nombre>
+                    <display>Crear noticia</display>
+                    <descripcion>Crear noticia</descripcion>
+                </funcion>
+
+				<funcion>
+                    <nombre>listar</nombre>
+                    <display>Listar noticia</display>
+                    <descripcion>Listar noticia</descripcion>
+                </funcion>
+            </funciones>
+            
+        </controlador>
+    </controladores>
+</modulos>

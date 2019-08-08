@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<modulos>
+    <nombre>Banner</nombre>
+    <icono>mdi-editor-insert-photo</icono>
+    <sitioMenu>principal</sitioMenu>
+    <descripcion>Modulo Banner</descripcion>
+   
+    <controladores>
+        <controlador>
+            <nombre>galeriaController</nombre>
+            <icono>mdi-editor-insert-photo</icono>
+            <display>Banner</display>
+            <descripcion>Controlador de Banner</descripcion>
+            
+            <funciones>
+                <funcion>
+                    <nombre>crear</nombre>
+                    <display>Agregar imagen</display>
+                    <descripcion>Agregar Imagen</descripcion>
+                </funcion>
+                <funcion>
+                    <nombre>listar</nombre>
+                    <display>Listar imagenes</display>
+                    <descripcion>Listar imagenes</descripcion>
+                </funcion>
+            </funciones>
+        </controlador>
+
+        <controlador>
+            <nombre>headerController</nombre>
+            <icono>mdi-editor-insert-photo</icono>
+            <display>Header</display>
+            <descripcion>Controlador de Header</descripcion>
+            
+            <funciones>
+                <funcion>
+                    <nombre>update</nombre>
+                    <display>Cambiar imagen header</display>
+                    <descripcion>Cambiar imagen header</descripcion>
+                </funcion>
+            </funciones>
+            
+        </controlador>
+
+
+    </controladores>
+</modulos>

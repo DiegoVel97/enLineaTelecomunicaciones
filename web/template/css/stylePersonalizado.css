@@ -1,0 +1,309 @@
+#formularioContacto{
+    z-index: 10; position: relative;
+}
+.fondoEscritorio{
+    position: absolute;
+    z-index: 3;
+    width: 80%;
+    top: 24em;
+    left: 40px;
+}
+
+.divNoticia{
+    background-color: #F1F1F1; padding: 10px; border-radius: 15px 15px 15px 15px;
+}
+
+.asesores{
+    position: absolute;
+    z-index: 2;
+    top: 11em;
+    left: 90px;
+    width: 60%;
+}
+
+.fondoLLamando{
+	position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0em;
+}
+
+.mjeUno{
+	position: absolute;
+    z-index: 2;
+    width: 70px;
+    top: 10em;
+    right: 200px;
+}
+
+.mjeDos{
+	position: absolute;
+    z-index: 2;
+    top: 10em;
+    left: 100px;
+    width: 70px;
+}
+
+.tuerca{
+    position: absolute;
+    z-index: 2;
+    top: 5em;
+    right: 70px;
+    width: 80px;
+}
+
+.imagen{
+    position: relative;
+    margin-top: 10em;
+}
+
+.contenedorForm{
+    margin-bottom: 50px;
+}
+
+
+.navbar-brand > img{
+    width: 350px;
+}
+
+
+@media (max-width: 553px) {
+  
+}
+
+
+@media (max-width: 425px) {
+}
+
+
+@media (max-width: 1024px){
+    .page-footer{
+        height: 100%;
+    }
+}
+
+@media (max-width: 1440px){
+    .page-footer{
+        height: 100%;
+    }
+}
+
+@media (max-width: 2560px){
+    .page-footer{
+        height: 100%;
+    }
+}
+
+
+
+
+
+@media screen and (min-width:240px) and (max-width: 321px) {
+    .navbar-brand > img{
+        width: 320px;
+    }
+    #fondoEscritorio{
+            position: absolute;
+    z-index: 3;
+    top: 5em;
+    left: 0px;
+        width: 320px;
+    }
+    #fondoLLamando{
+        top: -80px;
+        width: 320px;
+    }
+    #asesores{
+        top: 0px;
+    }
+
+
+
+.mjeUno{
+     position: absolute;
+    z-index: 2;
+    width: 30px;
+    top: 0em;
+    right: 20px;
+}
+
+.mjeDos{
+       position: absolute;
+    z-index: 2;
+    width: 30px;
+    top: 0em;
+    right: 20px;
+}
+
+.tuerca{
+    position: absolute;
+    z-index: 2;
+    top: 5em;
+    right: 70px;
+    width: 80px;
+}
+
+.navbar-brand > img{
+    width: 850px;
+}
+
+.logoEnlinea{
+    width: 270px !important;
+}
+.navbar-toggler{
+    margin-left: 100px;
+}
+
+#JiSlider{
+    height: 200px !important;
+    margin-bottom: -5em;
+}
+
+.w3l-slide-text{
+    margin-top: -60px;
+}
+}
+
+
+@media screen and (min-width:324px) and (max-width: 375px) {
+      .navbar-brand > img{
+        width: 340px;
+    }
+    #fondoEscritorio{
+            position: absolute;
+    z-index: 3;
+    top: 5em;
+    left: 0px;
+        width: 320px;
+    }
+    #fondoLLamando{
+        top: -80px;
+        width: 320px;
+    }
+    #asesores{
+        top: 0px;
+    }
+
+
+
+.mjeUno{
+     position: absolute;
+    z-index: 2;
+    width: 30px;
+    top: 0em;
+    right: 20px;
+}
+
+.mjeDos{
+       position: absolute;
+    z-index: 2;
+    width: 30px;
+    top: 0em;
+    right: 20px;
+}
+
+.tuerca{
+    position: absolute;
+    z-index: 2;
+    top: 5em;
+    right: 70px;
+    width: 80px;
+}
+
+.navbar-brand > img{
+    width: 850px;
+}
+
+.logoEnlinea{
+    width: 270px !important;
+}
+.navbar-toggler{
+    margin-left: 100px;
+}
+
+#JiSlider{
+    height: 200px !important;
+    margin-bottom: -5em;
+}
+
+.w3l-slide-text{
+    margin-top: -60px;
+}
+}
+
+
+@media screen and (min-width:380px) and (max-width: 425px) {
+
+  .navbar-brand > img{
+        width: 320px;
+    }
+    #fondoEscritorio{
+            position: absolute;
+    z-index: 3;
+    top: 5em;
+    left: 0px;
+        width: 320px;
+    }
+    #fondoLLamando{
+        top: -80px;
+        width: 320px;
+    }
+    #asesores{
+        top: 0px;
+    }
+
+
+
+.mjeUno{
+     position: absolute;
+    z-index: 2;
+    width: 30px;
+    top: 0em;
+    right: 20px;
+}
+
+.mjeDos{
+       position: absolute;
+    z-index: 2;
+    width: 30px;
+    top: 0em;
+    right: 20px;
+}
+
+.tuerca{
+    position: absolute;
+    z-index: 2;
+    top: 5em;
+    right: 70px;
+    width: 80px;
+}
+
+.navbar-brand > img{
+    width: 850px;
+}
+
+.logoEnlinea{
+    width: 270px !important;
+}
+.navbar-toggler{
+    margin-left: 100px;
+}
+
+#JiSlider{
+    height: 200px !important;
+    margin-bottom: -5em;
+}
+
+.w3l-slide-text{
+    margin-top: -60px;
+}
+}
+
+
+
+
+
+
+@media screen and (min-width:426px) and (max-width: 768px) {
+
+}
