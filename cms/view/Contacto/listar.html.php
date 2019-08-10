@@ -9,7 +9,7 @@
                                     <th>Direccion</th>
                                     <th>Email</th>
                                     <th>Estado</th>
-                                    <th ><center>Acciones</center></th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>                                
@@ -29,11 +29,6 @@
                                         </td>
                                         <td>
                                             <?php echo $contacto['email']; ?>
-                                        </td>
-                                         <td>
-                                            <a class="btn-floating  waves-effect waves-light teal" href="<?php echo crearUrl('contacto', 'contacto', 'exportPdf', array('noVista' => "noVista", 'id' => $contacto['id'])) ?>">
-                                                <i class="mdi-file-file-download small"></i>
-                                            </a>
                                         </td>   
                                         <!--
                                         <td>

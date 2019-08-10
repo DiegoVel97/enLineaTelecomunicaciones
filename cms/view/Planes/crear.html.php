@@ -34,7 +34,7 @@
             </div>
         <?php }  ?>
         
-        <form class="file-form-planes" id="formPlanes" data-action="<?php echo crearUrl("Planes","planes","postAgregarPlan", array('noVista' => 'noVista')) ?>" enctype="multipart/form-data"  method="post">
+        <form class="file-form-planes" id="formPlanes" data-action="<?php echo crearUrl("Planes","planes","postAgregarPlan", array('noVista' => 'noVista')) ?>" method="post">
 	        <div class="col s12 m6 l3" id="flight-card">
 	            <div class="input-field col s12">
 	            	<b>Titulo plan:</b>
@@ -58,7 +58,7 @@
 	            </div>
 	            <br>
 	            <div class="input-field col s12">
-	            	<b>Descripci&oacute;n del plan:</b>
+	            	<b>Descripci&oacute;n del plan: (separa por una coma ',' cada item de la descripci&oacute;n)</b>
 	                <div class="input-field col s12">
 	                    <textarea id="descripcionPlan" name="descripcionPlan"></textarea>
 	                </div>
@@ -79,11 +79,12 @@
 </div>
 
 <script type="text/javascript">
-	CKEDITOR.replace("tituloPlan");
+
+/*	CKEDITOR.replace("tituloPlan");
 	CKEDITOR.replace("valorPlan");
 
 	CKEDITOR.replace("descripcionPlan");
 	CKEDITOR.replace("descripcionPlanMeses");
-
+*/
 	
 </script>

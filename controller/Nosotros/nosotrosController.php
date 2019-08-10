@@ -20,5 +20,17 @@ class nosotrosController {
 
         include_once("../view/Nosotros/nosotros.html.php");
     }
+
+   	function servicio($parametros){
+		$objNosotros =  new nosotrosModel();
+
+		$id = $parametros[1];
+		$sql = "SELECT * FROM pag_nuestros_servicios WHERE id = '$id'";
+		$servicio = $objNosotros->find($sql);
+
+		$objNosotros->cerrar();
+
+		include_once("../view/Nosotros/Servicios/servicio.html.php");
+	}
 }
 

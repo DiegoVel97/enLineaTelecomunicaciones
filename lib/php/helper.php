@@ -233,5 +233,74 @@ function headerLogo() {
 
     return $header;
 }
-//-----------------------consulta # solicitudes-------------------------
 
+
+function plan() {
+    $objinicio = new sesionModel();
+
+    $result = "SELECT * FROM pag_plan";
+    $plan = $objinicio->select($result);
+
+    // Cierra la conexion
+    $objinicio->cerrar();
+
+    return $plan;
+}
+
+
+
+function navegacion() {
+    $objinicio = new sesionModel();
+
+    $result = "SELECT * FROM pag_menu_navegacion";
+    $navegacion = $objinicio->select($result);
+
+    // Cierra la conexion
+    $objinicio->cerrar();
+
+    return $navegacion;
+}
+
+function sub_navegacion(){
+    $objinicio = new sesionModel();
+
+    $result = "SELECT * FROM pag_sub_menu";
+    $sub_navegacion = $objinicio->select($result);
+    
+    $opciones = array();
+    foreach($sub_navegacion as $opciones){
+        $opciones[] = $opciones;
+    }
+
+
+    // Cierra la conexion
+    $objinicio->cerrar();
+
+    return $opciones;
+}
+
+function sub_menu(){
+     $objinicio = new sesionModel();
+
+    $result = "SELECT * FROM pag_sub_menu";
+    $sub_menu = $objinicio->select($result);
+
+
+    // Cierra la conexion
+    $objinicio->cerrar();
+
+    return $sub_menu;
+}
+
+function pag_promocion(){
+    $objinicio = new sesionModel();
+
+    $result = "SELECT * FROM pag_promocion";
+    $pag_promocion = $objinicio->select($result);
+
+
+    // Cierra la conexion
+    $objinicio->cerrar();
+
+    return $pag_promocion;
+}

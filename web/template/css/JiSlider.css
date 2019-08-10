@@ -1,8 +1,6 @@
 /****** JiSlider css ******/
 .jislider ul {
 	height: 500px;
-	margin: 0;
-	padding: 0;
 }
 
 .jislider ul li {
@@ -17,7 +15,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-size: cover;
+	background-size: 100% 100%;
 	background-position: center;
 	width: 100%;
 	height: 100%;

@@ -2,7 +2,7 @@
   .loader-page {
     position: fixed;
     z-index: 25000;
-    background: rgba(138,221,45,0.4);
+    background: rgba(0,0,0,0.4);
     left: 0px;
     top: 0px;
     height: 100%;
@@ -45,7 +45,8 @@
 </style>
     <!-- banner slider-->
  <div class="loader-page"></div>
-    <div class="banner-silder" style="margin-top: 7em;">
+ <div class="sepracacion"></div>
+    <div class="banner-silder">
         <div id="JiSlider" class="jislider">
             <ul>
                 <?php foreach(banner() as $slider) { ?>
@@ -125,7 +126,18 @@
                 
     <!-- banner bottom -->
     <div class="row contenedorForm col-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="imagen col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+       <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <center>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12" style="z-index: 99999;">
+                    <?php foreach(pag_promocion() as $promocion) { ?>
+                        <?php if($promocion['imagen'] == "Si"){  ?>
+                                <?php $url_file = "../cms/web/media/img/Promocion/".$promocion['url']; ?>
+                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12" style="z-index: 99999;">
+
+                            <img src="<?php echo addLib($url_file); ?>" alt="" width="100%">
+                            </div>
+                            <div class="imagen col-12 col-sm-6 col-md-12 col-lg-12 col-xl-12">
                     <img src="<?php echo addLib('template/images/mensajeUno.png'); ?>" alt=" " class="mjeDos" id="mjeDos"/>
                     <img src="<?php echo addLib('template/images/mensajeDos.png'); ?>" alt=" "  class="mjeUno" id="mjeUno"/>
                     <img src="<?php echo addLib('template/images/tuerca.png'); ?>" alt=" " class="tuerca" id="tuerca"/>
@@ -133,11 +145,37 @@
                     <img src="<?php echo addLib('template/images/llamando.png'); ?>" alt=" " class="asesores" id="asesores" />
                     <img src="<?php echo addLib('template/images/fondoEscritorio.png'); ?>" alt=" " class="fondoEscritorio" id="fondoEscritorio" />
                     <img src="<?php echo addLib('template/images/fondoLLamando.png'); ?>" alt=" " class="fondoLLamando" id="fondoLLamando" />
+                </div>
+                        <?php }else{ ?>
+                            <div class="" style="position: relative; position: relative; margin-top: 30px;">
+                                <?php echo $promocion['descripcion_texto']; ?>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-12">
+                    <img src="<?php echo addLib('template/images/mensajeUno.png'); ?>" alt=" " class="mjeDos" id="mjeDos"/>
+                    <img src="<?php echo addLib('template/images/mensajeDos.png'); ?>" alt=" "  class="mjeUno" id="mjeUno"/>
+                    <img src="<?php echo addLib('template/images/tuerca.png'); ?>" alt=" " class="tuerca" id="tuerca"/>
+
+                    <img src="<?php echo addLib('template/images/llamando.png'); ?>" alt=" " class="asesores" id="asesores" />
+                    <img src="<?php echo addLib('template/images/fondoEscritorio.png'); ?>" alt=" " class="fondoEscritorio" id="fondoEscritorio" />
+                    <img src="<?php echo addLib('template/images/fondoLLamando.png'); ?>" alt=" " class="fondoLLamando" id="fondoLLamando" />
+                </div>
+                            JBSJBSDJD
+                        <?php } } ?>
+                </div>
+
+
+
+                </center>
+                 
         </div>
         <div id="formularioContacto" class="formularioContacto col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                <div class="text-info-sec bg-light col-12 col-sm-12 col-md-12 col-lg-12">
-                    <h5 class="what-title text-dark my-3">Formulario de contacto</h5>
-                </div>
+            <br><br>
+                <center>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <?php $url_file = "../cms/web/media/img/header/logo-enlinea-comunicaciones.jpeg"; ?>
+                    <img src="<?php echo addLib($url_file); ?>" alt="" width="100%">
+                </div></center>
+                <br><br>
             <form class="file-form-banner" id="formBanner" data-action="<?php echo crearUrl("Contacto","contacto","registro", array('noVista' => 'noVista')) ?>" enctype="multipart/form-data"  method="post">
 
 
@@ -190,191 +228,44 @@
         <div class="container py-xl-5 py-lg-3" style="background-color: rgba(0,0,0,0.40); align-content: center; text-align: center;">
             <h3 class="tittle text-center text-uppercase text-white font-weight-bold mb-sm-5 mb-4">PLANES Y TARIFAS</h3>
             <hr>
+
             <div class="owl-carousel owl-theme" style="border-top:1px solid white;">
+                <?php 
+
+                foreach(plan() as $plan) { 
+
+                 $explode = explode(',', $plan['descripcion_plan']);
+                 $total = count($explode);
+                    ?>
                 
                 <div class="item planUno" id="planUno" style="margin-top: 40px; background-color: white; border-radius: 12px 12px;">
                     <div class="titulo col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="background-color: #F0F0F0;">
-                        <p style="font-size:20px; padding-top:10px; padding-bottom:10px; font-weight:bold; color: #1159FF;">Internet 45 Megas</p>
+                        <p style="font-size:20px; padding-top:10px; padding-bottom:10px; font-weight:bold; color: #1159FF;"><?php echo $plan["titulo_plan"]; ?></p>
                     </div>
                     <div class="precio">
-                        <p style="font-size:50px; font-weight:bold; color: #1159FF;">$46,000</p>
-                         <i style="margin-top: -20px;">Mensual</i>
+                        <p style="font-size:50px; font-weight:bold; color: #1159FF;"><?php echo $plan['valor_plan']; ?></p>
+                         <i style="margin-top: -20px;"><?php echo $plan["descripcion_del_plan_tiempo"]; ?></i>
                     </div>
                     <div class="descripcionPlan" style="padding: 10px 19px; font-size: 12px; color: black; align-content: left; text-align: left;">
                         <table class="table  table-striped">
                             <tbody>
+                            <?php for($i=1;$i<$total; $i++){ ?> 
+
                                 <tr>
                                     <td>
-                                         Plan básico de conexión a Internet, preferible para hogares, parcelas, fincas o casas de descanso que necesiten una conexión rápida para disfrutar de correo, vídeos, redes sociales entre otros servicios.
+                                        <?php echo $explode[$i]; ?>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        Instalación Inmediata.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Conexión de 4.5 Mbps
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Conecta los dispositivos que quieras.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Conexión sin cortes.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Mega Adicional por solo $10.000
-                                    </td>
-                                </tr>
+
+                            <?php } ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
+            <?php } ?>
 
 
 
-                <div class="item planDos" style="margin-top: 40px; background-color: white; border-radius: 12px 12px;">
-                    <div class="titulo col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="background-color: #F0F0F0;">
-                        <p style="font-size:20px; padding-top:10px; padding-bottom:10px; font-weight:bold; color: #a5cd3d;">Internet 45 Megas</p>
-                    </div>
-                    <div class="precio">
-                        <p style="font-size:50px; font-weight:bold; color: #a5cd3d;">$46,000</p>
-                         <i style="margin-top: -20px;">Mensual</i>
-                    </div>
-                    <div class="descripcionPlan" style="padding: 10px 19px; font-size: 12px; color: black; align-content: left; text-align: left;">
-                        <table class="table  table-striped">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                         Plan básico de conexión a Internet, preferible para hogares, parcelas, fincas o casas de descanso que necesiten una conexión rápida para disfrutar de correo, vídeos, redes sociales entre otros servicios.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Instalación Inmediata.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Conexión de 4.5 Mbps
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Conecta los dispositivos que quieras.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Conexión sin cortes.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Mega Adicional por solo $10.000
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="item planTres" style="margin-top: 40px; background-color: white; border-radius: 12px 12px;">
-                    <div class="titulo col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="background-color: #F0F0F0;">
-                        <p style="font-size:20px; padding-top:10px; padding-bottom:10px; font-weight:bold; color: #FF1111;">Internet 45 Megas</p>
-                    </div>
-                    <div class="precio">
-                        <p style="font-size:50px; font-weight:bold; color: #FF1111;">$46,000</p>
-                         <i style="margin-top: -20px;">Mensual</i>
-                    </div>
-                    <div class="descripcionPlan" style="padding: 10px 19px; font-size: 12px; color: black; align-content: left; text-align: left;">
-                        <table class="table  table-striped">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                         Plan básico de conexión a Internet, preferible para hogares, parcelas, fincas o casas de descanso que necesiten una conexión rápida para disfrutar de correo, vídeos, redes sociales entre otros servicios.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Instalación Inmediata.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Conexión de 4.5 Mbps
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Conecta los dispositivos que quieras.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Conexión sin cortes.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Mega Adicional por solo $10.000
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="item planTres" style="margin-top: 40px; background-color: white; border-radius: 12px 12px;">
-                    <div class="titulo col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="background-color: #F0F0F0;">
-                        <p style="font-size:20px; padding-top:10px; padding-bottom:10px; font-weight:bold; color: #FF1111;">Internet 45 Megas</p>
-                    </div>
-                    <div class="precio">
-                        <p style="font-size:50px; font-weight:bold; color: #FF1111;">$46,000</p>
-                         <i style="margin-top: -20px;">Mensual</i>
-                    </div>
-                    <div class="descripcionPlan" style="padding: 10px 19px; font-size: 12px; color: black; align-content: left; text-align: left;">
-                        <table class="table  table-striped">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                         Plan básico de conexión a Internet, preferible para hogares, parcelas, fincas o casas de descanso que necesiten una conexión rápida para disfrutar de correo, vídeos, redes sociales entre otros servicios.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Instalación Inmediata.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Conexión de 4.5 Mbps
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Conecta los dispositivos que quieras.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Conexión sin cortes.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Mega Adicional por solo $10.000
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
 
             </div>
         </div>

@@ -19,6 +19,11 @@
                     <display>Agregar plan</display>
                     <descripcion>Agregar plan</descripcion>
                 </funcion>
+                <funcion>
+                    <nombre>listar</nombre>
+                    <display>Ver planes</display>
+                    <descripcion>listar planes</descripcion>
+                </funcion>
             </funciones>
             
         </controlador>

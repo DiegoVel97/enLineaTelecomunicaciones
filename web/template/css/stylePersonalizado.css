@@ -1,3 +1,8 @@
+.sepracacion{
+    background-color: red;
+    height: 110px;
+}
+
 #formularioContacto{
     z-index: 10; position: relative;
 }
@@ -53,8 +58,8 @@
 }
 
 .imagen{
-    position: relative;
-    margin-top: 10em;
+    position: absolute;
+    margin-top: -14em;
 }
 
 .contenedorForm{

@@ -297,7 +297,6 @@ nav.navbar.shrink .navbar-toggler {
 
 
 .bs-slider-overlay {
-    background-color: rgba(0, 0, 0, 0.40);
     height: 50vw;
 }
 
@@ -442,6 +441,7 @@ a.button-style {
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
+    
 }
 
 .middle-w3l p {

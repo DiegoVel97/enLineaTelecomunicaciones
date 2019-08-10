@@ -50,14 +50,14 @@ class contactoController {
 
 		$id = $parametros[1];
 		
-		$query = "SELECT * FROM pag_contacto WHERE id = '$id'";
-		$contacto = $objContacto->find($query);
+		$query = "SELECT * FROM pag_contacto";
+		$contactos = $objContacto->select($query);
 		
 		
 		$objContacto->cerrar();
 
         require_once("../lib/pdf/dompdf_config.inc.php");
-        include_once("../view/Contacto/pdf.html.php");
+        include_once("../view/Contacto/excel.html.php");
        
 	}
 

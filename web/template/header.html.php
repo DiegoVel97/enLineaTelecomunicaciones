@@ -1,15 +1,15 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
+<!-- DESARROLLO Y PROGRAMACION: World Web Design Colombia
+NOMBRE PROGRAMADOR: Diego Fernando Velez
+CONTACTO: diegofernando9705@gmail.com-->
 
 <!DOCTYPE html>
+
 <html lang="zxx">
 
 <head>
   <title><?php echo NOMBRE_APLICATIVO." | ".NOMBRE_COMPLETO_APLICATIVO ?></title>
+  
   <!-- Meta tag Keywords -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8" />

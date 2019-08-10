@@ -52,10 +52,10 @@
 	        <center>
 	       	 	<input class="waves-effect waves-light btn" type="button" id="editarNoticiaForm" name="" value="Actualizar">	        	
 	        </center>
+
         </form>
 
 <script type="text/javascript">
 	CKEDITOR.replace("tituloNoticia");
 	CKEDITOR.replace("descripcionNoticia");
 </script>
-

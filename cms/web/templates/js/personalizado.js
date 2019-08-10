@@ -501,7 +501,7 @@ $(document).ready(function(){
             url: url,
             data: parametros,
             success: function (response) {
-                          alert(response);
+                alert(response);
                 var respuesta = $.parseJSON(response);
 
                 if (respuesta.accion === true) {
@@ -611,5 +611,66 @@ $(document).ready(function(){
         $(this).ajaxSubmit(options);
         return false;
     });
+
+
+
+      /* ===================== PLANES ==========================*/
+
+
+  //consulta Noticia
+    $("#buscarplan").keyup(function () {
+
+        var noticia = $("#buscarplan").val();
+        if (noticia != "") {
+            $('#pagina').val(1);
+        }
+
+        var pagina = $('#pagina').val();
+        var url = $(this).attr("data-url");
+
+        $.ajax({
+            url: url,
+            type: "POST",
+            data: "busquedaPlan=" + noticia + "&pagina" + pagina,
+            success: function (data) {
+                $("#divplans").html(data);
+            }
+        });
+    });
+
+    $(document).on('click', '.eliminarPlan', function (e) {
+        e.preventDefault();
+        var url = $(this).attr('data-url');
+        var rol_id = $(this).attr('data-rol_id');
+
+        swal({title: "¿Realmente desea eliminar este registro?",
+            text: "Una vez eliminado, no se podrá recuperar.",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "Red",
+            confirmButtonText: "Sí, eliminar registro",
+            closeOnConfirm: false
+        },
+        
+        function () {
+            $.ajax({
+                url: url,
+                type: 'post',
+                data: {
+                    rol_id: rol_id
+                }
+            }).done(function (data) {
+              //alert(data);
+                if(data==true){
+                    swal("Eliminado!", "Registro eliminado.", "success");
+                    window.setTimeout('location.reload()', 1000);
+                }else{
+                    swal("No se pudo eliminar", "Hubo un error a la hora de eliminar el registro.", "error");
+                }
+            });
+        });
+        $('#buscarplan').focus();
+    });
+
 
 });

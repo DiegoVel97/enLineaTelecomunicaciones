@@ -40,9 +40,23 @@
                     <descripcion>Cambiar imagen header</descripcion>
                 </funcion>
             </funciones>
-            
         </controlador>
 
+
+        <controlador>
+            <nombre>promocionController</nombre>
+            <icono>mdi-editor-insert-photo</icono>
+            <display>Promociones</display>
+            <descripcion>Controlador de promocion</descripcion>
+            
+            <funciones>
+                <funcion>
+                    <nombre>update</nombre>
+                    <display>Cambiar imagen</display>
+                    <descripcion>Cambiar imagen promocional</descripcion>
+                </funcion>
+            </funciones>
+        </controlador>
 
     </controladores>
 </modulos>

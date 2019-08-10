@@ -3,8 +3,8 @@
 class Conexion {
     
     private $host="localhost";
-    private $user="sharecom_manuel";
-    private $password="G0[E++qKxBCU";
+    private $user="root";
+    private $password="";
     private $database="sharecom_enlinea_telecomunicacion";
     private $conn;
     
