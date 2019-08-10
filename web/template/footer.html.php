@@ -43,11 +43,6 @@
 									<img src="<?php echo addLib('template/images/icon-facebook.png'); ?>" width="40px">
 								</a>
 							</li>
-							<li class="mx-1">
-								<a href="#">
-									<img src="<?php echo addLib('template/images/icon-twitter.png'); ?>" width="40px">
-								</a>
-							</li>
 							<li>
 								<a href="#">
 									<img src="<?php echo addLib('template/images/icon-instagram.png'); ?>" width="40px">
@@ -122,7 +117,7 @@
 				</div>
 				<div class="col-lg-4 w3ls-left-copy text-lg-right text-center">
 					<p class="text-white">
-						<i class="fas fa-phone mr-2"></i> 1234567890</p>
+						<i class="fas fa-phone mr-2"></i></p>
 				</div>
 			</div>
 		</div>

@@ -45,10 +45,8 @@ class contactoController {
         include_once("../view/Contacto/listar.html.php");
 	}
 
-	function exportPdf($parametros = false){
+	function exportPdf(){
 		$objContacto = new contactoModel();
-
-		$id = $parametros[1];
 		
 		$query = "SELECT * FROM pag_contacto";
 		$contactos = $objContacto->select($query);

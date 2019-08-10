@@ -144,7 +144,7 @@
 
                     <img src="<?php echo addLib('template/images/llamando.png'); ?>" alt=" " class="asesores" id="asesores" />
                     <img src="<?php echo addLib('template/images/fondoEscritorio.png'); ?>" alt=" " class="fondoEscritorio" id="fondoEscritorio" />
-                    <img src="<?php echo addLib('template/images/fondoLLamando.png'); ?>" alt=" " class="fondoLLamando" id="fondoLLamando" />
+                    <img src="<?php echo addLib('template/images/fondoLlamando.png'); ?>" alt=" " class="fondoLLamando" id="fondoLLamando" />
                 </div>
                         <?php }else{ ?>
                             <div class="" style="position: relative; position: relative; margin-top: 30px;">
@@ -157,9 +157,9 @@
 
                     <img src="<?php echo addLib('template/images/llamando.png'); ?>" alt=" " class="asesores" id="asesores" />
                     <img src="<?php echo addLib('template/images/fondoEscritorio.png'); ?>" alt=" " class="fondoEscritorio" id="fondoEscritorio" />
-                    <img src="<?php echo addLib('template/images/fondoLLamando.png'); ?>" alt=" " class="fondoLLamando" id="fondoLLamando" />
+                    <img src="<?php echo addLib('template/images/fondoLlamando.png'); ?>" alt=" " class="fondoLLamando" id="fondoLLamando" />
                 </div>
-                            JBSJBSDJD
+                            
                         <?php } } ?>
                 </div>
 
@@ -168,11 +168,11 @@
                 </center>
                  
         </div>
-        <div id="formularioContacto" class="formularioContacto col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div id="formularioContacto" class="formularioContacto col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6" style="z-index: 100000;">
             <br><br>
                 <center>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                    <?php $url_file = "../cms/web/media/img/header/logo-enlinea-comunicaciones.jpeg"; ?>
+                    <?php $url_file = "../cms/web/media/img/Header/logo-enlinea-comunicaciones.jpeg"; ?>
                     <img src="<?php echo addLib($url_file); ?>" alt="" width="100%">
                 </div></center>
                 <br><br>
@@ -389,8 +389,8 @@
     </div>
     <!-- //flicker -->
      <!-- middle section -->
-    <div class="middle-w3l text-center py-5">
-        <div class="container py-xl-5 py-lg-3">
+    <div class="middle-w3l text-center">
+        <div class="container" style="padding-top: 3%;">
             <h3 class="tittle text-center text-uppercase text-white font-weight-bold mb-sm-4 mb-3 mt-4">
                  DENUNCIA A LAS LINEAS DE ATENCIÓN EN PREVENCIÓN SOBRE LA PORNOGRAFIA INFANTIL!</h3>
            <div class="row">
@@ -401,17 +401,17 @@
                </div>
                <div class="fiscalia col-md-3">
                    <a href="https://www.fiscalia.gov.co/" target="_blank">
-                        <img src="<?php echo addLib('template/images/autoridad_fiscalia.png'); ?>" style="width: 220px;">
+                        <img src="<?php echo addLib('template/images/autoridad_fiscalia.png'); ?>" style="width: 180px;">
                     </a>
                </div>
                <div class="policia col-md-3">
                     <a href="https://www.policia.gov.co/" target="_blank">
-                       <img src="<?php echo addLib('template/images/autoridad_policia.png'); ?>" style="width: 220px;">
+                       <img src="<?php echo addLib('template/images/autoridad_policia.png'); ?>" style="width: 180px;">
                     </a>
                </div>
                <div class="icbf col-md-3">
                    <a href="https://www.icbf.gov.co/" target="_blank">
-                            <img src="<?php echo addLib('template/images/autoridad_icbf.png'); ?>" style="width: 220px;">
+                            <img src="<?php echo addLib('template/images/autoridad_icbf.png'); ?>" style="width: 180px;">
                     </a>
                </div>
              
