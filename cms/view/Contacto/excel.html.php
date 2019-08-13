@@ -1,6 +1,6 @@
 <?php 
-header("Pragma: public");
-header("Expires: 0");
+header("Content-type: application/vnd.ms-excel");
+
 $filename = "reporte-contactos".date("d-m-Y").".xls";
 header("Content-type: application/x-msdownload");
 header("Content-Disposition: attachment; filename=$filename");
