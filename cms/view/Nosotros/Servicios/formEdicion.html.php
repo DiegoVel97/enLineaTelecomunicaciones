@@ -22,7 +22,7 @@
 
         <!--Fin contenedor mensajes de error-->
 
-        <form class="file-form-servicios-edicion" id="formServiciosEdicion" data-action="<?php echo crearUrl("Nosotros","nosotros","updateServicio", array('noVista' => 'noVista', 'id' => $servicio['id'])) ?>" enctype="multipart/form-data"  method="post">
+        <form class="file-form-servicios-edicion" id="formServiciosEdicion" data-action="<?php echo crearUrl("Nosotros","nosotros","updateServicio", array('noVista' => 'noVista', 'id' => $servicio['slug'])) ?>" enctype="multipart/form-data"  method="post">
 	        <div class="col s12 m6 l3" id="flight-card">
 
 				<div class="col s12 m6 l3" id="flight-card">
@@ -45,7 +45,7 @@
 	            <div class="input-field col s12">
 	            	<b>Titulo Servicio:</b>
 	                <div class="input-field col s12">
-	                    <textarea id="tituloServicios" name="tituloServicios" required=""><?php echo $servicio['titulo_servicios']; ?></textarea>
+	                    <textarea id="tituloServicios" name="tituloServicios" required=""><?php echo $servicio['titulo_servicio']; ?></textarea>
 	                </div>
 	            </div>
 	            <br>
@@ -55,31 +55,30 @@
 	                    <textarea id="descripcionServicios" name="descripcionServicios"><?php echo $servicio['descripcion_servicio']; ?></textarea>
 	                </div>
 	            </div>
-	            <br>
 	            <div class="input-field col s12">
 				    <b>¿Posicionar en el men&uacute; de navegaci&oacute;n?</b>
 				    <select class="browser-default select" id="posicionMenu" name="posicionMenu">
 				    		<option selected="">Seleccione una opcion.</option>
-				    		<?php if($servicio['aparece_header'] == "Si"){ ?>
-					    		<option value="Si" selected="">Si</option>
-					      		<option value="No">No</option>
-					      	<?php }else{ ?>
-					      		<option value="Si">Si</option>
-					      		<option value="No" selected="">No</option>
-					      	<?php } ?>
+				    		<option value="Si">Si</option>
+				      		<option value="No">No</option>
 				    </select>
 				 </div>
-				<br>
+				 <br>
 	            <div class="input-field col s12" id="inputNavegacion" style="display: none;">
 				    <b>Men&uacute; navegaci&oacute;n</b>
 				    <select class="browser-default select" id="menuNavegacion" name="menuNavegacion">
 				    	<option value="" selected="">Seleccione una opcion.</option>
-				    	<?php foreach($consultaMenuNavegacion as $menuNavegacion) { ?>
-				    		<option value="<?php echo $menuNavegacion['id_menu']; ?>"><?php echo $menuNavegacion['descripcion']; ?></option>
+				    	<?php foreach($consultaMenuNavegacion as $menuNavegacion) { 
+				    			if($servicio['posicion_menu'] == $menuNavegacion['id_menu']) { ?>
+				    					<option value="<?php echo $menuNavegacion['id_menu']; ?>" selected=""><?php echo $menuNavegacion['descripcion']; ?></option>
+				    			<?php }else{ ?>
+				    				<option value="<?php echo $menuNavegacion['id_menu']; ?>" selected=""><?php echo $menuNavegacion['descripcion']; ?></option>
+				    			<?php } ?>
 				    	<?php } ?>
 				    </select>
 				</div>
 	            <br>
+
 	            <div class="input-field col s12">
 				    <b>Estado del servicio</b>
 				    <select class="browser-default select" id="estadoServicios" name="estadoServicios">

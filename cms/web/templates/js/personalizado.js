@@ -4,8 +4,7 @@ $(document).ready(function(){
 
 		var data_url = $("#formNosotros").attr("data-action");
 		var parametros = {
-                "tituloNosotros" : CKEDITOR.instances['tituloNosotros'].getData(),
-                "descripcionNosotros" : CKEDITOR.instances['descripcionNosotros'].getData()
+                    "descripcionNosotros" : CKEDITOR.instances['descripcionNosotros'].getData()
         };
 		
 		$.ajax({
@@ -672,5 +671,34 @@ $(document).ready(function(){
         $('#buscarplan').focus();
     });
 
+    $(document).on('click', '.eliminarServicio', function (e) {
+        e.preventDefault();
+        var url = $(this).attr('data-url');
+
+        swal({title: "¿Realmente desea eliminar este registro?",
+            text: "Una vez eliminado, no se podrá recuperar.",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "Red",
+            confirmButtonText: "Sí, eliminar registro",
+            closeOnConfirm: false
+        },
+        
+        function () {
+            $.ajax({
+                url: url,
+                type: 'post'
+            }).done(function (data) {
+              //alert(data);
+                if(data==true){
+                    swal("Eliminado!", "Registro eliminado.", "success");
+                    window.setTimeout('location.reload()', 1000);
+                }else{
+                    swal("No se pudo eliminar", "Hubo un error a la hora de eliminar el registro.", "error");
+                }
+            });
+        });
+        $('#buscarServicio').focus();
+    });
 
 });

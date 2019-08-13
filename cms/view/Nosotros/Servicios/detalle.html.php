@@ -10,12 +10,12 @@
 <div class="row">
     <div class="col s4">
             <b style="color: #448aff;"><h6>Imagen del servicio</h6></b> 
-            <?php $url_file = "media/img/Servicios/" . $servicio['imagen_servicio']; ?>
-                                            <img src="<?php echo addLib($url_file); ?>" width="200px">
+            <?php $url_file = "media/img/Servicios/" . $servicio['imagen']; ?>
+                <img src="<?php echo addLib($url_file); ?>" width="100px">
     </div>
     <div class="col s4">
         <b style="color: #448aff;"><h6>Titulo del servicio</h6></b> 
-        <?php echo $servicio['titulo_servicios']; ?>
+        <?php echo $servicio['titulo_servicio']; ?>
     </div>
 
     <div class="col s4">
@@ -32,8 +32,21 @@
         <b style="color: #448aff;"><h6>¿Aparece en el header?</h6></b> 
         <?php echo $servicio['aparece_header']; ?>
     </div>
-    
-    <div class="col s6">
+    <div class="col s4" id="inputNavegacion" style="">
+                    <b style="color: #448aff;"><h6>Men&uacute; navegaci&oacute;n</h6></b> 
+                    <select class="browser-default select" disabled="">
+                        <option value="" selected="">Seleccione una opcion.</option>
+                        <?php foreach($consultaMenuNavegacion as $menuNavegacion) { 
+                                if($servicio['posicion_menu'] == $menuNavegacion['id_menu']) { ?>
+                                        <option value="<?php echo $menuNavegacion['id_menu']; ?>" selected=""><?php echo $menuNavegacion['descripcion']; ?></option>
+                                <?php }else{ ?>
+                                    <option value="<?php echo $menuNavegacion['id_menu']; ?>" selected=""><?php echo $menuNavegacion['descripcion']; ?></option>
+                                <?php } ?>
+                        <?php } ?>
+                    </select>
+                </div>
+
+    <div class="col s4">
         <b style="color: #448aff;"><h6>Estado servicio</h6></b> 
         <?php echo $servicio['estado_servicio']; ?>
     </div>

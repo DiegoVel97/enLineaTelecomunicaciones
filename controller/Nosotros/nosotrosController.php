@@ -24,13 +24,14 @@ class nosotrosController {
    	function servicio($parametros){
 		$objNosotros =  new nosotrosModel();
 
-		$id = $parametros[1];
-		$sql = "SELECT * FROM pag_nuestros_servicios WHERE id = '$id'";
+		$id = $parametros[0];
+		echo $id;
+		$sql = "SELECT * FROM pag_nuestros_servicios WHERE slug = '$id'";
 		$servicio = $objNosotros->find($sql);
 
 		$objNosotros->cerrar();
 
-		include_once("../view/Nosotros/Servicios/servicio.html.php");
+		include_once("../view/Nosotros/servicio.html.php");
 	}
 }
 

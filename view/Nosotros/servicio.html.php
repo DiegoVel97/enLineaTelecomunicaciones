@@ -5,7 +5,7 @@
 	</div>
 	<div class="cuerpoNosotros col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 		<div class="container">
-				<?php echo $queryNosotros['servicio']; ?>
+				<?php echo $servicio['descripcion_servicio']; ?>
 		</div>
 
 	</div>

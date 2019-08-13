@@ -50,8 +50,7 @@
         <!--Fin mensaje de campos obligatorios-->
         <form class="col s12">
             <div class="input-field">
-                <i class="mdi-action-search prefix"></i>
-                <input type="text" class="active" id="buscarContacto" name='buscarContacto' class="header-search-input z-depth-2" data-url="<?php echo crearUrl("Contacto", "contacto", "buscarAjax", array('noVista' => "noVista")) ?>" />
+                <i class="mdi-action-search prefix"></i><input type="text" id="buscarContacto" name='buscarContacto' class="header-search-input z-depth-2" data-url="<?php echo crearUrl("Contacto", "contacto", "buscarAjax", array('noVista' => "noVista")) ?>" />
                 <label for="buscarContacto" class="active">Digite el nombre y/o  a Buscar</label>
             </div>
         </form>

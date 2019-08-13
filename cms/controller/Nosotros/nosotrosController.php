@@ -66,14 +66,15 @@ class nosotrosController {
 	function edicionNosotros(){
 		$objNosotros = new nosotrosModel();
 
-		$title = $_POST['tituloNosotros'];
 		$description = $_POST['descripcionNosotros'];
 
-		$sqlUpdate = "UPDATE pag_nosotros SET title_page = '$title', description_page = '$description' WHERE id = '1'";
+		$sqlUpdate = "UPDATE pag_nosotros SET description_page = '$description' WHERE id = '1'";
 		$query = $objNosotros->update($sqlUpdate);
 
 		if($query){
 			echo 1;
+		}else{
+			echo 0;
 		}
 
 	}
@@ -125,11 +126,12 @@ class nosotrosController {
             setErrores($errores);
         }else{
 
-			$titulo = $_POST['tituloServicios'];
+			$titulo = strip_tags($_POST['tituloServicios']);
 			
 			$descripcion = $_POST['descripcionServicios'];
 			$estado = $_POST['estadoServicios'];
-
+			$slug_explode = explode(" ", $titulo);
+			$slug = rand("1","20000").reset($slug_explode);
         	// FOTO SERVICIO
             $nombreFoto = $_FILES['file']['name'];
             $ruta = $_FILES['file']['tmp_name'];
@@ -138,19 +140,22 @@ class nosotrosController {
             if ($ruta <> "") {
                 if (move_uploaded_file($ruta, $rutaydoc)) {
 
-                	$sql_servicios = "INSERT INTO pag_servicios (titulo_servicios,descripcion_servicio,imagen_servicio,aparece_header,estado_servicio) VALUES('$titulo','$descripcion','$nombreFoto','$menuNavegacion','$estado')";
+                	$sql_servicios = "INSERT INTO pag_nuestros_servicios (
+                	titulo_servicio,
+                	descripcion_servicio,
+                	imagen,
+                	slug,
+                	aparece_header,
+                	posicion_menu,
+                	estado_servicio) VALUES(
+                	'$titulo',
+                	'$descripcion',
+                	'$nombreFoto',
+                	'$slug',
+                	'Si',
+                	'$menuNavegacion',
+                	'$estado')";
         			$insercion_servicios = $objNosotros->insertar($sql_servicios);
-        			
-        			if($_POST['posicionMenu'] == "Si"){
-
-        				$tituloMenu = strip_tags($_POST['tituloServicios']);
-        				$menuNavegacion = $_POST['menuNavegacion'];
-
-        				$sql_menu_navegacion = "INSERT INTO pag_sub_menu (descripcion_sub,href_sub,id_menu_principal,estado_sub) VALUES('$tituloMenu','href','$menuNavegacion','activo')";
-        				$insercion_menu = $objNosotros->insertar($sql_menu_navegacion);
-
-        			}
-
                 }
             }
 
@@ -167,7 +172,7 @@ class nosotrosController {
 	function listar(){
 		$objNosotros = new  nosotrosModel();
 
-		$query = "SELECT * FROM pag_servicios";
+		$query = "SELECT * FROM pag_nuestros_servicios";
 		$consultaServicios = $objNosotros->select($query);
 
 		  //aqui empieza el paginado       
@@ -188,7 +193,7 @@ class nosotrosController {
 
         $buscarServicio = $_POST['buscarServicio'];
 
-        $sql = "SELECT * FROM pag_servicios WHERE titulo_servicios LIKE '%" . $buscarServicio . "%' or descripcion_servicio LIKE '%" . $buscarServicio . "%' ORDER BY id ASC ";
+        $sql = "SELECT * FROM pag_nuestros_servicios WHERE titulo_servicio LIKE '%" . $buscarServicio . "%' or descripcion_servicio LIKE '%" . $buscarServicio . "%' ORDER BY id ASC ";
         $consultaServicios = $objNosotros->select($sql);
 
 
@@ -214,7 +219,7 @@ class nosotrosController {
 
 
 		$id = $parametros[1];
-		$sql = "SELECT * FROM pag_servicios WHERE id = '$id'";
+		$sql = "SELECT * FROM pag_nuestros_servicios WHERE slug = '$id'";
 		$servicio = $objNosotros->find($sql);
 
 		$objNosotros->cerrar();
@@ -269,38 +274,54 @@ class nosotrosController {
 		            $rutaydoc = getDocumentRoot() . "/web/media/img/Servicios/" . $nombreFoto;
 		            if ($ruta <> "") {
 		                if (move_uploaded_file($ruta, $rutaydoc)) {
-		                	$sql_update = "UPDATE pag_servicios SET titulo_servicios='$titulo', descripcion_servicio='$descripcion',imagen_servicio='$nombreFoto',aparece_header='$posicionMenu', estado_servicio='$estado' WHERE id = '$id'";
+		                	$sql_update = "UPDATE pag_nuestros_servicios SET titulo_servicio='$titulo', descripcion_servicio='$descripcion', imagen='$nombreFoto', , aparece_header='$posicionMenu', posicion_menu = '$menuNavegacion', estado_servicio='$estado' WHERE slug = '$id'";
 		                	$update_servicio = $objNosotros->update($sql_update);
+		                	echo $sql_update;
 		                }
 		            }	
 			}else{
-
-
         		$titulo = $_POST['tituloServicios'];
 				$descripcion = $_POST['descripcionServicios'];
 				$estado = $_POST['estadoServicios'];
 				$posicionMenu = $_POST['posicionMenu'];
+				$menuNavegacion = $_POST['menuNavegacion'];
 	        	
-		                	$sql_update = "UPDATE pag_servicios SET titulo_servicios='$titulo', descripcion_servicio='$descripcion',aparece_header='$posicionMenu', estado_servicio='$estado' WHERE id = '$id'";
+		                	$sql_update = "UPDATE pag_nuestros_servicios SET titulo_servicio='$titulo', descripcion_servicio='$descripcion', aparece_header='$posicionMenu', posicion_menu = '$menuNavegacion', estado_servicio='$estado' WHERE slug = '$id'";
 		                	$update_servicio = $objNosotros->update($sql_update);
-		             
+		                	echo $sql_update;
+
 			}
 
         }
-
-        echo getRespuestaAccion('listar');
 	}
 
 	function detalle($parametros = false){
 		$objNosotros =  new nosotrosModel();
 
+		$sqlMenu = "SELECT * FROM pag_menu_navegacion";
+		$consultaMenuNavegacion = $objNosotros->select($sqlMenu);
+
 		$id = $parametros[1];
-		$sql = "SELECT * FROM pag_servicios WHERE id = '$id'";
+		$sql = "SELECT * FROM pag_nuestros_servicios WHERE slug = '$id'";
 		$servicio = $objNosotros->find($sql);
 
 		$objNosotros->cerrar();
 
 		include_once("../view/Nosotros/Servicios/detalle.html.php");
+	}
+
+	function  eliminarServicio($parametros){
+		$objServicio = new nosotrosModel();
+
+		$id = $parametros[1];
+		$sql_delete = "DELETE FROM pag_nuestros_servicios WHERE slug = '$id'";
+		$delete = $objServicio->delete($sql_delete);
+
+		if(isset($delete)){
+			echo true;
+		}else{
+			echo false;
+		}
 	}
 
 

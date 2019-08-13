@@ -14,18 +14,7 @@
             <descripcion>Controlador de Roles</descripcion>
             
             <funciones>
-                <funcion>
-                    <nombre>mision</nombre>
-                    <display>Edicion mision</display>
-                    <descripcion>Editar Mision</descripcion>
-                </funcion>
-
-				<funcion>
-                    <nombre>vision</nombre>
-                    <display>Editar vision</display>
-                    <descripcion>Editar Mision</descripcion>
-                </funcion>
-
+                
 				<funcion>
                     <nombre>nosotros</nombre>
                     <display>Editar nosotros</display>

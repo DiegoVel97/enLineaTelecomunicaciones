@@ -279,17 +279,17 @@ function sub_navegacion(){
     return $opciones;
 }
 
-function sub_menu(){
+function pag_nuestros_servicios(){
      $objinicio = new sesionModel();
 
-    $result = "SELECT * FROM pag_sub_menu";
-    $sub_menu = $objinicio->select($result);
+    $result = "SELECT * FROM pag_nuestros_servicios";
+    $pag_nuestros_servicios = $objinicio->select($result);
 
 
     // Cierra la conexion
     $objinicio->cerrar();
 
-    return $sub_menu;
+    return $pag_nuestros_servicios;
 }
 
 function pag_promocion(){

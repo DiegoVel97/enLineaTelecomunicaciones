@@ -65,34 +65,72 @@ CONTACTO: diegofernando9705@gmail.com-->
       </button>
       <div class="collapse navbar-collapse navbar-toggle " id="navbarNavAltMarkup">
         <ul class="navbar-nav mx-xl-auto">
-          <li>
-            <a class="nav-link text-uppercase active" href="<?php echo addLib(''); ?>">Inicio</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link text-uppercase active" data-toggle="" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo addLib(''); ?>">Inicio</a>
+             <?php foreach(pag_nuestros_servicios() as $servicios) { ?>
+
+                  <?php if($servicios['posicion_menu'] == 1) { ?>
+
+                    <div class="dropdown-menu second mt-2" style="display: none;">
+                      <a class="dropdown-item" href="<?php echo crearUrl('nosotros','nosotros','servicio', array('id' => $servicios['slug'])); ?>"><?php echo utf8_encode($servicios['titulo_servicio']); ?></a>
+                    </div>
+
+                  <?php } ?>
+
+            <?php } ?>
           </li>
-          <li>
-            <a class="nav-link text-uppercase" href="<?php echo crearUrl('nosotros','nosotros','nosotros'); ?>">Nosotros</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link text-uppercase" data-toggle="" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo crearUrl('nosotros','nosotros','nosotros'); ?>">Nosotros</a>
+            <?php foreach(pag_nuestros_servicios() as $servicios) { ?>
+
+                  <?php if($servicios['posicion_menu'] == 2) { ?>
+
+                    <div class="dropdown-menu second mt-2" style="display: none;">
+                      <a class="dropdown-item" href="<?php echo crearUrl('nosotros','nosotros','servicio', array('id' => $servicios['slug'])); ?>"><?php echo utf8_encode($servicios['titulo_servicio']); ?></a>
+                    </div>
+
+                  <?php } ?>
+            <?php } ?>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link text-uppercase dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                aria-expanded="false">Nuestros servicios
-              <i class="fas fa-caret-down"></i>
-            </a>
-            <div class="dropdown-menu second mt-2" style="display: none;">
-              <a class="dropdown-item scroll" href="#services">Internet Dedicado y/o Banda Ancha según sus necesidades</a>
-              <a class="dropdown-item" href="faqs.html">Conectividad entre sedes</a>
-
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item scroll" href="#feedback">Configuración de redes LAN</a>
-              <a class="dropdown-item" href="gallery.html">Solución inalámbrica para uso exterior (outdoor) y/o Interior (indoor)</a>
-              <a class="dropdown-item" href="single.html">Venta y alquiler de equipos Networking</a>
-              <a class="dropdown-item" href="single.html">Soporte técnico para redes LAN y WAN</a>
-
-            </div>
+                aria-expanded="false">Nuestros servicios</a>
+                <div class="dropdown-menu second mt-2" style="display: none;">
+                  <?php foreach(pag_nuestros_servicios() as $servicios) { ?>
+                        <?php if($servicios['posicion_menu'] == 3) { ?>
+                            <a class="dropdown-item" href="<?php echo crearUrl('nosotros','nosotros','servicio', array('id' => $servicios['slug'])); ?>"><?php echo utf8_encode($servicios['titulo_servicio']); ?></a>
+                        <?php } ?>
+                  <?php } ?>
+                </div>
+            
           </li>
-          <li>
-            <a class="nav-link text-uppercase" href="<?php echo crearUrl('noticias','noticias','noticias'); ?>">Noticias</a>
+          <li class="nav-item dropdown">
+              <a class="nav-link text-uppercase" data-toggle="" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo crearUrl('noticias','noticias','noticias'); ?>">Noticias</a>
+            <?php foreach(pag_nuestros_servicios() as $servicios) { ?>
+
+                  <?php if($servicios['posicion_menu'] == 4) { ?>
+
+                    <div class="dropdown-menu second mt-2" style="display: none;">
+                      <a class="dropdown-item" href="<?php echo crearUrl('nosotros','nosotros','servicio', array('id' => $servicios['slug'])); ?>"><?php echo utf8_encode($servicios['titulo_servicio']); ?></a>
+                    </div>
+
+                  <?php } ?>
+
+            <?php } ?>
           </li>
-          <li>
-            <a class="nav-link text-uppercase" href="<?php echo crearUrl('contacto','contacto','contacto'); ?>">Contactanos</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link text-uppercase" data-toggle="" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo crearUrl('contacto','contacto','contacto'); ?>">Contactanos</a>
+             <?php foreach(pag_nuestros_servicios() as $servicios) { ?>
+
+                  <?php if($servicios['posicion_menu'] == 5) { ?>
+
+                    <div class="dropdown-menu second mt-2" style="display: none;">
+                      <a class="dropdown-item" href="<?php echo crearUrl('nosotros','nosotros','servicio', array('id' => $servicios['slug'])); ?>"><?php echo utf8_encode($servicios['titulo_servicio']); ?></a>
+                    </div>
+
+                  <?php } ?>
+
+            <?php } ?>
           </li>
         </ul>
         <!--

@@ -12,11 +12,11 @@
                                 <?php foreach ($consultaServicios as $servicio) { ?>
                                     <tr>
                                         <td>
-                                        	<?php $url_file = "media/img/Servicios/" . $servicio['imagen_servicio']; ?>
-                                            <img src="<?php echo addLib($url_file); ?>" width="200px">
+                                        	<?php $url_file = "media/img/Servicios/" . $servicio['imagen']; ?>
+                                            <img src="<?php echo addLib($url_file); ?>" width="100px">
                                         </td>
                                         <td>
-                                            <?php echo strip_tags($servicio['titulo_servicios']); ?>
+                                            <?php echo strip_tags($servicio['titulo_servicio']); ?>
                                         </td>
                                         <td>
                                             <?php echo $servicio['aparece_header']; ?>
@@ -27,16 +27,22 @@
                                         </td>
                                         <td>
                                             <a class="btn-floating modal-trigger  waves-effect waves-light teal editarServicio" 
-                                       href="#editarServicio" data-url="<?php echo crearUrl('Nosotros', 'nosotros', 'edicionServicio', array('noVista' => "noVista", 'id' => $servicio['id'])) ?>">
+                                       href="#editarServicio" data-url="<?php echo crearUrl('Nosotros', 'nosotros', 'edicionServicio', array('noVista' => "noVista", 'id' => $servicio['slug'])) ?>">
                                                 <i class="mdi-content-create small"></i>
                                             </a>
                                         </td>   
                                         
                                         <td>
-                                            <a class="btn-floating modal-trigger  waves-effect waves-light teal verDetalleServicio" href="#detalleServicio" data-url="<?php echo crearUrl('Nosotros', 'nosotros', 'detalle', array('noVista' => "noVista", 'id' => $servicio['id'])) ?>">
+                                            <a class="btn-floating modal-trigger  waves-effect waves-light teal verDetalleServicio" href="#detalleServicio" data-url="<?php echo crearUrl('Nosotros', 'nosotros', 'detalle', array('noVista' => "noVista", 'id' => $servicio['slug'])) ?>">
                                                 <i class="mdi-action-find-in-page tiny"></i>
                                             </a>
                                         </td>   
+
+                                        <td>
+                                            <a class="btn-floating waves-effect waves-light red eliminarServicio" data-url="<?php echo crearUrl('Nosotros', 'nosotros', 'eliminarServicio', array('noVista' => "noVista", 'id' => $servicio['slug'])) ?>">
+                                                <i class="mdi-action-delete small"></i>
+                                            </a>
+                                        </td>
                                     </tr>
                                 <?php } ?>
                             </tbody>
