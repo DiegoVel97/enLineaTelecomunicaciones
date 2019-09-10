@@ -36,14 +36,11 @@
                         <img src="<?php echo addLib("../cms/web/img/redes_sociales/facebook.png"); ?>" style="width: 40px;">
                     </a>
 
-                <a href="javascript: void(0);" onclick="window.open('http://twitter.com/home?status=Mira%20lo%20que%20leo%20de%ENLINEA%20|TELECOMUNICACIONES%20link:%20http://bit.ly/2GQOpRe', 'ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="btwitter">
+                <a href="javascript: void(0);" onclick="window.open('http://twitter.com/home?status=leyendo%20<?php echo URL_ACTUAL; ?>', 'ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="btwitter">
                        <img class="twitterCompartir" src="<?php echo addLib("../cms/web/img/redes_sociales/Twitter.png"); ?>" width="40px">
                 </a>
-				<?php $tituloNoticia = $noticia['title_notice'];?>
-				<a href="javascript: void(0);" onclick="window.open('https://plus.google.com/share?url=<?php echo URL_ACTUAL; ?>&amp;text=Post de ENLINEA|TELECOMUNICACIONES', 'ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="btwitter">
-                        <img class="whatsappCompartir" src="<?php echo addLib("../cms/web/img/redes_sociales/gmail.png"); ?>" width="40px">
-                </a>
-                <a href="javascript: void(0);" onclick="window.open('whatsapp://send?text=texto%20con%20<?php echo URL_ACTUAL; ?>&amp;text=Post de ENLINEA|TELECOMUNICACIONES', 'ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="btwitter">
+
+                <a href="javascript: void(0);" onclick="window.open('https://api.whatsapp.com/send?text=<?php echo URL_ACTUAL; ?>', 'ventanacompartir', 'toolbar=0, status=0, width=650, height=450');" class="btwitter">
                         <img class="whatsappCompartir" src="<?php echo addLib("../cms/web/img/redes_sociales/whatsapp.png"); ?>" width="40px">
                 </a>
 			</div>

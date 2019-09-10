@@ -11,7 +11,7 @@
 				<div class="formularioContacto col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
 					<h5 class="what-title text-dark my-3">Formulario de contacto</h5>
 					<hr>
-					<form class="file-form-banner" id="formBanner" data-action="<?php echo crearUrl("Contacto","contacto","registro", array('noVista' => 'noVista')) ?>" enctype="multipart/form-data"  method="post">
+					<form class="file-form-banner" id="formBanner" data-action="<?php echo crearUrl("Contacto","contacto","envioEmail", array('noVista' => 'noVista')) ?>" enctype="multipart/form-data"  method="post">
 
 
                         <div class="form-group">

@@ -315,8 +315,7 @@
             <div class="d-flex t-in">
 
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-info-sec p-0">
-                    <iframe src="http://openspeedtest.com/Get-widget.php" width="100%" scrolling="no" height="490px" frameborder="0" style="margin-top: 0%;">
-                    </iframe>
+                   <!--OST Widget code start--><div style="text-align:right;"><div style="min-height:360px;"><div style="width:100%;height:0;padding-bottom:50%;position:relative;"><iframe style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:360px;border:none;overflow:hidden !important;" src="//openspeedtest.com/Get-widget.php"></iframe></div></div></div><!-- OST Widget code end -->
 
                 </div>
 

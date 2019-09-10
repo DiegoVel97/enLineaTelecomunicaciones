@@ -34,7 +34,7 @@ if (isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] == "/recordar") {
         include_once('templates/sidebar-left.html.php');
         // Se carga la vista principal del aplicativo
         include_once('templates/principal.html.php');
-        include_once('templates/sidebar-right.html.php');
+
         // Se carga el footer de nuestra aplicación
         include_once('templates/footer.html.php');
     } else {
@@ -97,8 +97,6 @@ if (isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] == "/recordar") {
 
             echo "</section'>
             </div>";
-
-            include_once('templates/sidebar-right.html.php');
 
             // Se carga el footer de nuestra aplicación
             include_once('templates/footer.html.php');

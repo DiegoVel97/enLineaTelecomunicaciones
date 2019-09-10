@@ -22,7 +22,7 @@ class contactoController {
 
         }else{
 
-        	$name_complete = $_POST["name_complete"];
+        $name_complete = $_POST["name_complete"];
 		$phone_complete = $_POST["phone_complete"];
 		$address_complete = $_POST["address_complete"];
 		$email_complete = $_POST["email_complete"];
@@ -43,6 +43,27 @@ class contactoController {
 
         $objContacto->cerrar();
 
+    }
+
+
+    function envioEmail(){
+        $name_complete = $_POST["name_complete"];
+        $phone_complete = $_POST["phone_complete"];
+        $address_complete = $_POST["address_complete"];
+        $email_complete = $_POST["email_complete"];
+        $textarea_complete = $_POST["textarea_complete"];
+
+
+        ini_set( 'display_errors', 1 );
+        error_reporting( E_ALL );
+        $from = "comunicaciones@tecnoshare.com.co";
+        $to = $address_complete;
+        $subject = "Checking PHP mail";
+        $message = "PHP mail works just fine";
+        $headers = "From:" . $from;
+        mail($to,$subject,$message, $headers);
+        
+        echo true;
     }
 }
 

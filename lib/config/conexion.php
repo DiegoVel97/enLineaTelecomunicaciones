@@ -2,10 +2,11 @@
 
 class Conexion {
     
-    private $host="localhost";
-    private $user="root";
-    private $password="";
-    private $database="sharecom_enlinea_telecomunicacion";
+
+    private $host="10.158.117.168";
+    private $user="super-admin";
+    private $password="El*90160+";
+    private $database="enlineatelecomunicaciones";
     private $conn;
     
     public function __construct() {
