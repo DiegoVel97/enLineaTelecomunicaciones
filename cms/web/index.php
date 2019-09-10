@@ -24,10 +24,10 @@ if (isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] == "/recordar") {
     include_once('templates/recordarPass/recordarPass.html.php');
     include_once('templates/recordarPass/footer.html.php');
 } else {
-    if (!isset($_SESSION['login']) && (!isset($_SERVER['PATH_INFO']) || $_SERVER['PATH_INFO'] != "/sesion/sesion/postInicio/noVista")) {
-        include_once('templates/login/header.html.php');
-        include_once('templates/login/login.html.php');
-        include_once('templates/login/footer.html.php');
+    if (!isset($_SESSION['enLineaTelecomunicacionesLogin']) && (!isset($_SERVER['PATH_INFO']) || $_SERVER['PATH_INFO'] != "/sesion/sesion/postInicio/noVista")) {
+        include_once('templates/enLineaTelecomunicacionesLogin/header.html.php');
+        include_once('templates/enLineaTelecomunicacionesLogin/enLineaTelecomunicacionesLogin.html.php');
+        include_once('templates/enLineaTelecomunicacionesLogin/footer.html.php');
     } elseif (!isset($_SERVER['PATH_INFO'])) {
         // Se carga el header de nuestra aplicación
         include_once('templates/header.html.php');

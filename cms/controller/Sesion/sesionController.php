@@ -29,7 +29,7 @@ class SesionController {
                     and pag_permisos.rol_id = pag_rol.rol_id
                     and pag_permisos.rol_id='" . $arraySesion['sesion']['rol_id'] . "' and pag_usuario.per_id='" . $arraySesion['sesion']['per_id'] . "'";
                 $consultarUsuario = $objSesion->find($sql);
-                $_SESSION['login'] = $consultarUsuario;
+                $_SESSION['enLineaTelecomunicacionesLogin'] = $consultarUsuario;
                 
                 echo 1;
             } else {
@@ -44,7 +44,7 @@ class SesionController {
     }
 
     function cerrarSesion() {
-        unset($_SESSION['login']);
+        unset($_SESSION['enLineaTelecomunicacionesLogin']);
         redirect(addLib(''));
     }
 
